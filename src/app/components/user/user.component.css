@@ -1,0 +1,18 @@
+#btn_guncelle, #btn_sil, #btn_ekle{
+    color: green;
+}
+#btn_sil:hover, #btn_ekle:hover{
+    color: red;
+    border-radius: 10px;
+}
+#input_username:hover, #input_password:hover , #input_description:hover{
+    background-color: rgb(232, 241, 97);
+    color: green;
+}
+#btn_guncelle:hover{
+    color: red;
+    border-radius: 10px;
+}
+#btn_guncelle:active{
+    color: yellow;
+}

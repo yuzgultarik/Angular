@@ -1,0 +1,40 @@
+<div
+  class="container"
+  style="text-align: center; text-decoration: underline; border: 1px solid #aaa"
+>
+  <h1><u>Ürünler Tablosu</u></h1>
+
+  <table style="width: 100%; border: 1px solid #aaa">
+    <tr>
+      <th>ID</th>
+      <th>Ürün Adı</th>
+      <th>Açıklama</th>
+      <th>İŞLEM</th>
+    </tr>
+    <tr *ngFor="let item of products">
+      <td>{{ item.id }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.description }}</td>
+      <td><button (click)="UrunSil(item.id)">Sil</button></td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td>
+        <input
+          type="text"
+          [(ngModel)]="productdata.name"
+          placeholder="Urun adı giriniz"
+        />
+      </td>
+      <td>
+        <input
+          type="text"
+          [(ngModel)]="productdata.description"
+          placeholder="Açıklama giriniz"
+        />
+      </td>
+      <td><button (click)="product_ekle()">Ürün Ekle</button></td>
+    </tr>
+  </table>
+</div>

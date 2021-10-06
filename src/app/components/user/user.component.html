@@ -1,0 +1,64 @@
+<div
+  class="container"
+  style="text-align: center; text-decoration: underline; border: 1px solid #aaa"
+>
+  <h1><u>Kullanıcılar Tablosu</u></h1>
+  <table style="width: 100%; border: 1px solid #aaa">
+    <tr>
+      <th>id</th>
+      <th>Username</th>
+      <th>Password</th>
+      <th>Description</th>
+      <th>İŞLEM</th>
+    </tr>
+
+    <tr *ngFor="let item of users">
+      <td>{{ item.id }} </td>
+      <td>{{ item.username }} <input id="input_put_username" type="text" style="width: 100px; display: none;"></td>
+      <td>{{ item.password }}</td>
+      <td>{{ item.description }}</td>
+      <td>
+        <button id="btn_sil" (click)="kullanici_sil(item.id)">Sil</button>
+        <button id="btn_guncelle"  onclick="islem()">Güncelleme</button>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <input
+          type="text"
+          id="input_username"
+          [(ngModel)]="userdata.username"
+          placeholder="Kullanıcı adı gir"
+        />
+      </td>
+      <td>
+        <input
+          type="text"
+          id="input_password"
+          [(ngModel)]="userdata.password"
+          placeholder="Şifre"
+        />
+      </td>
+      <td>
+        <input
+          type="text"
+          id="input_description"
+          [(ngModel)]="userdata.description"
+          placeholder="açıklama"
+        />
+      </td>
+      <td>
+        <button id="btn_ekle" (click)="kullanici_ekle()">Kullanıcı Ekle</button>
+      </td>
+    </tr>
+  </table>
+  <br />
+</div>
+
+
+<script>
+  function islem() {
+    alert(id);
+  }
+</script>

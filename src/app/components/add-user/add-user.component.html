@@ -1,0 +1,23 @@
+<h1><u> Kullanıcı ekleme</u></h1>
+<input
+  type="text"
+  [(ngModel)]="userdata.username"
+  placeholder="Kullanıcı adı gir"
+/>
+<br />
+<input type="text" [(ngModel)]="userdata.password" placeholder="Şifre gir" />
+<br />
+<input
+  type="text"
+  [(ngModel)]="userdata.description"
+  placeholder="Açiklama gir"
+/>
+<br>
+
+<button (click)="kullanici_ekle()">Kayıt</button>
+
+ <ul>
+    <li>{{userdata?.username}}</li>
+    <li>{{userdata?.password}}</li>
+    <li>{{userdata?.description}}</li>
+</ul> 
